@@ -126,8 +126,8 @@ bot.on('message', message => {
                         }
                         else
                         {
-                            managedChannels[length - 1] = channel;
-                            managedChannels[length] = null;
+                            managedChannels[managedChannels.length - 1] = channel;
+                            managedChannels[managedChannels.length] = null;
                         }
                         message.channel.send("added this channel to managedChannels list");
                         break;
@@ -179,8 +179,8 @@ bot.on('message', message => {
                         }
                         else
                         {
-                            commandChannels[length - 1] = message.channel;
-                            commandChannels[length] = null;
+                            commandChannels[commandChannels.length - 1] = message.channel;
+                            commandChannels[commandChannels.length] = null;
                         }
                         message.channel.send("added this channel to commandChannel list");
                         break;
